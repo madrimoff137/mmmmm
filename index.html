@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="MOTO BIKE — mototsikllar va moto aksessuarlar do‘koni.">
+  <title>MOTO BIKE — Yo‘lingni tanla</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Asosiy mazmunga o‘tish</a>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#home" aria-label="MOTO BIKE bosh sahifa">
+        <span class="brand-mark" aria-hidden="true">M</span><span>MOTO<span class="brand-light">BIKE</span></span>
+      </a>
+      <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Menyuni ochish" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Asosiy navigatsiya">
+        <a href="#home">Bosh sahifa</a>
+        <a href="#catalog">Mototsikllar</a>
+        <a href="#catalog" data-category-link="Aksessuarlar">Aksessuarlar</a>
+        <a href="#about">Biz haqimizda</a>
+        <a href="#contact">Aloqa</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="search-toggle" type="button" aria-label="Qidiruvni ochish" title="Qidiruv">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+        </button>
+        <button class="icon-button counted-button" id="favorites-open" type="button" aria-label="Sevimlilar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.8c0 5.2-8.8 10.1-8.8 10.1S3.2 14 3.2 8.8A4.8 4.8 0 0 1 12 6.2a4.8 4.8 0 0 1 8.8 2.6Z"></path></svg><span class="count-badge" id="favorites-count">0</span>
+        </button>
+        <button class="icon-button counted-button" id="cart-open" type="button" aria-label="Savat">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 11.1a2 2 0 0 0 2 1.6h8.9a2 2 0 0 0 2-1.6L22 8H6"></path><circle cx="10" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg><span class="count-badge" id="cart-count">0</span>
+        </button>
+      </div>
+    </div>
+    <div class="search-bar container" id="search-bar" hidden>
+      <label class="sr-only" for="search-input">Mahsulot qidirish</label>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+      <input id="search-input" type="search" placeholder="Mahsulot nomini yozing..." autocomplete="off">
+      <button class="text-button" id="search-close" type="button">Yopish</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-photo" role="img" aria-label="Sport mototsikl bilan yo‘l manzarasi"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content container">
+        <p class="eyebrow"><span></span> HAR BIR BURILISHDA ERKINLIK</p>
+        <h1 id="hero-title">YO‘LINGNI TANLA.<br><span>TEZLIKNI HIS QIL.</span></h1>
+        <p class="hero-copy">Sening xarakteringga mos mototsikl va safaring uchun kerakli jihozlar — barchasi bir joyda.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#catalog">Katalogni ko‘rish <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="#about">Batafsil <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-stats" aria-label="Do‘kon haqida">
+          <div><strong>120+</strong><span>mahsulot</span></div><i></i>
+          <div><strong>4.9</strong><span>mijozlar bahosi</span></div><i></i>
+          <div><strong>24/7</strong><span>maslahat</span></div>
+        </div>
+      </div>
+      <div class="hero-side-label">RIDE YOUR WAY — EST. 2020</div>
+    </section>
+
+    <section class="catalog-section section-space" id="catalog" aria-labelledby="catalog-title">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow dark-eyebrow"><span></span> TANLOV SENIKI</p><h2 id="catalog-title">MOTO <span>KOLEKSIYA</span></h2></div>
+          <p class="section-intro">Shahar ko‘chalari yoki uzoq safarlar — o‘zingga mosini top.</p>
+        </div>
+        <div class="catalog-toolbar">
+          <div class="category-list" id="category-filters" aria-label="Kategoriya filtrlari"></div>
+          <div class="catalog-controls">
+            <label class="sr-only" for="sort-select">Saralash</label>
+            <select id="sort-select">
+              <option value="featured">Tavsiya etilgan</option>
+              <option value="price-asc">Avval arzonlari</option>
+              <option value="price-desc">Avval qimmatlari</option>
+              <option value="newest">Yangilari</option>
+            </select>
+            <button class="text-button clear-filters" id="clear-filters" type="button">Filtrlarni tozalash</button>
+          </div>
+        </div>
+        <div class="catalog-status" id="catalog-status" aria-live="polite"></div>
+        <div class="product-grid" id="product-grid"></div>
+        <div class="empty-state" id="catalog-empty" hidden>
+          <span class="empty-icon" aria-hidden="true">⌕</span><h3>Mahsulot topilmadi</h3><p>Boshqa so‘z yoki kategoriya bilan qidirib ko‘ring.</p>
+          <button class="button button-dark" type="button" id="empty-clear">Filtrlarni tozalash</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="promo-band" aria-label="Do‘kon afzalliklari">
+      <div class="container promo-inner">
+        <div><span class="promo-icon">01</span><p><strong>Tekshirilgan sifat</strong><small>Har bir mahsulot kafolat bilan</small></p></div>
+        <div><span class="promo-icon">02</span><p><strong>Tez yetkazib berish</strong><small>O‘zbekiston bo‘ylab</small></p></div>
+        <div><span class="promo-icon">03</span><p><strong>Mutaxassis maslahati</strong><small>To‘g‘ri tanlovda yordam</small></p></div>
+      </div>
+    </section>
+
+    <section class="about-section section-space" id="about">
+      <div class="container about-grid">
+        <div class="about-image-wrap"><img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1000&q=85" alt="Mototsikl yonida safarga tayyor haydovchi" loading="lazy"><span class="image-stamp">RIDE<br>FREE</span></div>
+        <div class="about-copy">
+          <p class="eyebrow dark-eyebrow"><span></span> BIZ HAQIMIZDA</p>
+          <h2>YO‘L — BU<br><span>HISSIYOT.</span></h2>
+          <p>MOTO BIKE — mototsiklni shunchaki transport emas, erkinlik va xarakter ifodasi deb biladiganlar uchun. Biz ishonchli texnika, sifatli jihozlar va samimiy maslahatni birlashtiramiz.</p>
+          <p>Har bir safar xavfsiz va unutilmas bo‘lishi uchun kerakli tanlovda yoningizdamiz.</p>
+          <a class="arrow-link" href="#contact">Biz bilan bog‘laning <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section section-space" id="reviews">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow"><span></span> BIZNING JAMOA</p><h2 class="light-heading">HAYDOVCHILAR <span>FIKRI</span></h2></div>
+          <div class="review-rating"><strong>4.9</strong><span>★★★★★<small>mijozlarimiz bahosi</small></span></div>
+        </div>
+        <div class="review-grid">
+          <article class="review-card"><div class="stars" aria-label="5 yulduz">★★★★★</div><p>“Birinchi mototsiklimni shu yerdan oldim. Jamoa ehtiyojimga mos model topishda juda yordam berdi.”</p><div class="review-author"><span class="avatar">AK</span><span><strong>Aziz K.</strong><small>Toshkent · Naked bike</small></span></div></article>
+          <article class="review-card"><div class="stars" aria-label="5 yulduz">★★★★★</div><p>“Kaskam sifati a’lo, yetkazib berish ham tez bo‘ldi. Endi safarga tayyorman!”</p><div class="review-author"><span class="avatar">SM</span><span><strong>Sevara M.</strong><small>Samarqand · Moto jihozlar</small></span></div></article>
+          <article class="review-card"><div class="stars" aria-label="5 yulduz">★★★★★</div><p>“Mahsulotlar tanlovi zo‘r, narxlar ham aniq. Maslahat va servis uchun alohida rahmat.”</p><div class="review-author"><span class="avatar">JB</span><span><strong>Javohir B.</strong><small>Buxoro · Touring</small></span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq-section section-space" id="faq">
+      <div class="container faq-layout">
+        <div><p class="eyebrow dark-eyebrow"><span></span> SAVOLLARINGIZ BORMI?</p><h2>KO‘P SO‘RALADIGAN<br><span>SAVOLLAR</span></h2><p class="section-intro">Kerakli javobni topa olmasangiz, bizga yozing.</p></div>
+        <div class="faq-list">
+          <details><summary>Buyurtma qanday yetkazib beriladi?<span></span></summary><p>Buyurtmalar O‘zbekiston bo‘ylab hamkor yetkazib berish xizmati orqali yuboriladi. Muddat va narx hududingizga qarab kelishiladi.</p></details>
+          <details><summary>Mototsiklga kafolat beriladimi?<span></span></summary><p>Ha. Kafolat muddati va shartlari tanlangan modelga qarab farq qiladi. Xarid oldidan mutaxassisimiz barcha tafsilotlarni tushuntiradi.</p></details>
+          <details><summary>Mahsulotni almashtirish mumkinmi?<span></span></summary><p>Foydalanilmagan mahsulotni asl holati va hujjatlari bilan qaytarish yoki almashtirish shartlari bo‘yicha biz bilan bog‘laning.</p></details>
+          <details><summary>Qaysi kaska o‘lchami menga mos?<span></span></summary><p>Bosh aylanasini santimetrda o‘lchab, mahsulot tavsifidagi o‘lcham jadvali bilan solishtiring. Shubhangiz bo‘lsa, maslahat so‘rang.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section-space" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow"><span></span> BOG‘LANISH</p><h2>SAFARINGIZNI<br><span>BOSHLAYMIZ.</span></h2>
+          <p>Savol yoki maslahat kerakmi? Biz sizga yordam berishga tayyormiz.</p>
+          <a class="contact-link" href="tel:+998901234567"><span class="contact-symbol">☎</span><span><small>TELEFON</small><strong>+998 90 123 45 67</strong></span></a>
+          <a class="contact-link" href="https://t.me/" target="_blank" rel="noopener noreferrer"><span class="contact-symbol">↗</span><span><small>TELEGRAM</small><strong>@motobike_uz</strong></span></a>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+          <h3>Bizga yozing</h3><p>Maydonlarni to‘ldiring, siz bilan bog‘lanamiz.</p>
+          <label for="contact-name">Ismingiz</label><input id="contact-name" name="name" type="text" autocomplete="name" required minlength="2" placeholder="Ismingizni kiriting">
+          <label for="contact-phone">Telefon raqamingiz</label><input id="contact-phone" name="phone" type="tel" autocomplete="tel" required pattern="^[+0-9() -]{7,20}$" placeholder="+998 __ ___ __ __">
+          <label for="contact-message">Xabaringiz</label><textarea id="contact-message" name="message" rows="3" required minlength="5" placeholder="Sizga qanday yordam bera olamiz?"></textarea>
+          <button class="button button-primary" type="submit">Xabarni tayyorlash <span aria-hidden="true">→</span></button>
+          <p class="form-note">Demo: xabar serverga yuborilmaydi. Siz bilan bog‘lanish ma’lumotlari qurilmada saqlanmaydi.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark">M</span><span>MOTO<span class="brand-light">BIKE</span></span></a><p>Erkinlik sari harakat.</p></div>
+      <div class="footer-links"><strong>BO‘LIMLAR</strong><a href="#catalog">Katalog</a><a href="#about">Biz haqimizda</a><a href="#reviews">Mijozlar fikri</a><a href="#faq">Savol-javob</a></div>
+      <div class="footer-links"><strong>ALOQA</strong><a href="tel:+998901234567">+998 90 123 45 67</a><a href="https://t.me/" target="_blank" rel="noopener noreferrer">Telegram kanal</a><span>Toshkent, O‘zbekiston</span></div>
+      <div class="footer-admin"><strong>DO‘KON BOSHQARUVI</strong><p>Mahsulotlaringizni boshqarish.</p><button class="button button-outline small-button" id="admin-open" type="button">Admin panel ↗</button></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year"></span> MOTO BIKE. Barcha huquqlar himoyalangan.</span><span>Mas’uliyat bilan haydang. Doimo kaska taqing.</span></div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Yuqoriga qaytish">↑</button>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+  <dialog class="app-dialog" id="details-dialog" aria-labelledby="details-title"><div class="dialog-top"><span class="eyebrow dark-eyebrow"><span></span> MAHSULOT TAFSILOTI</span><button class="dialog-close" type="button" data-close-dialog aria-label="Yopish">×</button></div><div id="details-content"></div></dialog>
+  <dialog class="app-dialog side-dialog" id="cart-dialog" aria-labelledby="cart-title"><div class="dialog-top"><div><p class="eyebrow dark-eyebrow"><span></span> SIZNING TANLOVINGIZ</p><h2 id="cart-title">SAVAT</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Yopish">×</button></div><div id="cart-content"></div></dialog>
+  <dialog class="app-dialog side-dialog" id="favorites-dialog" aria-labelledby="favorites-title"><div class="dialog-top"><div><p class="eyebrow dark-eyebrow"><span></span> SAQLAB QO‘YILGAN</p><h2 id="favorites-title">SEVIMLILAR</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Yopish">×</button></div><div id="favorites-content"></div></dialog>
+  <dialog class="app-dialog admin-dialog" id="admin-dialog" aria-labelledby="admin-title">
+    <div class="dialog-top"><div><p class="eyebrow dark-eyebrow"><span></span> DO‘KON BOSHQARUVI</p><h2 id="admin-title">ADMIN <span>PANEL</span></h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Yopish">×</button></div>
+    <div class="admin-notice"><strong>Demo administrator paneli</strong><span>Mahsulotlar ushbu brauzerning localStorage xotirasida saqlanadi. Bu frontend autentifikatsiyasi emas — real do‘konda backend ruxsat nazoratidan foydalaning.</span></div>
+    <form class="admin-form" id="admin-form" novalidate>
+      <input id="admin-product-id" type="hidden">
+      <div class="admin-form-heading"><h3 id="admin-form-title">Yangi mahsulot</h3><button class="text-button" id="admin-cancel-edit" type="button" hidden>Bekor qilish</button></div>
+      <div class="admin-fields">
+        <div class="field-wide"><label for="admin-name">Mahsulot nomi</label><input id="admin-name" name="name" required maxlength="80" placeholder="Masalan, Yamaha MT-07"></div>
+        <div><label for="admin-price">Narxi (so‘m)</label><input id="admin-price" name="price" type="number" min="1" step="1" required placeholder="85000000"></div>
+        <div><label for="admin-old-price">Eski narxi (ixtiyoriy)</label><input id="admin-old-price" name="oldPrice" type="number" min="1" step="1" placeholder="92000000"></div>
+        <div><label for="admin-category">Kategoriya</label><select id="admin-category" name="category" required></select></div>
+        <div><label for="admin-stock">Ombordagi miqdor</label><input id="admin-stock" name="stock" type="number" min="0" step="1" required placeholder="5"></div>
+        <div class="field-wide"><label for="admin-image">Rasm URL</label><input id="admin-image" name="image" type="url" required placeholder="https://example.com/moto.jpg"></div>
+        <div class="field-wide"><label for="admin-description">Tavsif</label><textarea id="admin-description" name="description" rows="3" required minlength="10" maxlength="1000" placeholder="Mahsulot haqida qisqacha ma’lumot..."></textarea></div>
+      </div>
+      <button class="button button-primary admin-submit" id="admin-submit" type="submit">Mahsulot qo‘shish <span aria-hidden="true">+</span></button>
+    </form>
+    <div class="admin-list-heading"><h3>Mahsulotlar ro‘yxati</h3><span id="admin-product-count"></span></div>
+    <div class="admin-product-list" id="admin-product-list"></div>
+  </dialog>
+</body>
+</html>
